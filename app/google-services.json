@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "125778183471",
+    "firebase_url": "https://zips-b22e1.firebaseio.com",
+    "project_id": "zips-b22e1",
+    "storage_bucket": "zips-b22e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125778183471:android:2ec7c136f90c648f",
+        "android_client_info": {
+          "package_name": "com.zipstored.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125778183471-20h2au1h0guj1n9j95s9udjkdikitu69.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zipstored.com",
+            "certificate_hash": "d29a237f6389c39a590a6b8c1bc8dff97f1b91eb"
+          }
+        },
+        {
+          "client_id": "125778183471-eo5h7dnv3ka6d9cqn6kp79mjhqbkakc6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvZEZrcTz3QVyVoYy3rQso9gmvwG6Erxg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125778183471-eo5h7dnv3ka6d9cqn6kp79mjhqbkakc6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

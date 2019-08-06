@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorPrimary">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@color/colorPrimary"
+            android:id="@+id/rl_housing_cell"
+            android:gravity="center"
+
+    >
+
+
+        <com.zipstored.com.utils.CircularImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/leftmenu_image_profile"
+                android:id="@+id/iv_resource_thumb"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="fitXY"
+        />
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="25dp"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/iv_resource_thumb">
+
+            <com.zipstored.com.LatoRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John Doe"
+                    android:textColor="#fff"
+                    android:textSize="25sp"/>
+
+
+            <com.zipstored.com.LatoRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John@infomail.com"
+                    android:textColor="#fff"
+                    android:textSize="15sp"
+                    android:drawablePadding="5dp"
+                    android:paddingTop="4dp"
+            />
+
+            <com.zipstored.com.LatoRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+2157467855 765"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:drawablePadding="5dp"
+                    android:paddingTop="4dp"
+            />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="25dp"
+            android:id="@+id/ll_my_profile">
+
+        <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/user"
+                android:tint="#fff"
+                android:layout_gravity="center"/>
+
+
+        <com.zipstored.com.LatoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Profile"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+        />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="35dp"
+            android:id="@+id/ll_order">
+
+        <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/history"
+                android:tint="#fff"
+                android:layout_gravity="center"/>
+
+
+        <com.zipstored.com.LatoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Rent History"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="25dp">
+
+        <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/speech_chat"
+                android:tint="@color/colorWhite"
+                android:layout_gravity="center"/>
+
+
+        <com.zipstored.com.LatoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Chats"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="25dp">
+
+        <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/info"
+                android:tint="@color/colorWhite"
+                android:layout_gravity="center"/>
+
+
+        <com.zipstored.com.LatoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FAQ"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="25dp">
+
+        <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/icon_terms"
+                android:layout_gravity="center"/>
+
+
+        <com.zipstored.com.LatoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tc_policies"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="25dp">
+
+        <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/info"
+                android:tint="@color/colorWhite"
+                android:layout_gravity="center"/>
+
+
+        <com.zipstored.com.LatoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/help"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="25dp"
+            android:id="@+id/ll_log_out"
+    >
+
+        <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/icon_logout"
+                android:layout_gravity="center"/>
+
+
+        <com.zipstored.com.LatoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log out"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+        />
+
+    </LinearLayout>
+
+    <ImageView android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:src="@mipmap/house_background"
+               android:layout_marginTop="25dp"
+               android:scaleType="fitXY"
+
+    />
+
+</LinearLayout>

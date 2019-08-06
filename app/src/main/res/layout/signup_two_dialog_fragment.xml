@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:background="@color/colorWhite">
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rr_root_layout">
+
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/btn_back"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/iv_back"/>
+
+    </RelativeLayout>
+
+
+    <com.zipstored.com.LatoRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="25dp"
+            android:textSize="17sp"
+    />
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_marginLeft="25dp"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginRight="25dp"
+                  android:weightSum="1">
+
+        <com.rilixtech.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ccp_defaultNameCode="US" />
+
+        <com.zipstored.com.LatoRegularEditTextView
+                android:layout_width="0dp"
+                android:layout_weight=".9"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone_hint"
+                android:background="@null"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:cursorVisible="true"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="#919191"
+                android:textCursorDrawable="@drawable/cursor_drawable"
+                android:id="@+id/edt_phone_number"
+                android:inputType="phone"
+        />
+
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight=".1"
+                android:layout_gravity="right"
+                android:src="@mipmap/login_tick"
+                android:visibility="gone"
+                android:id="@+id/iv_tick_phone"
+
+        />
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPinkLightApp"/>
+
+
+    <com.zipstored.com.LatoRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="25dp"
+            android:textSize="17sp"
+    />
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_marginLeft="25dp"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginRight="25dp"
+                  android:weightSum="1">
+
+
+        <com.zipstored.com.LatoRegularEditTextView
+                android:layout_width="0dp"
+                android:layout_weight=".95"
+                android:layout_height="wrap_content"
+                android:hint="@string/password_hint"
+                android:background="@null"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:cursorVisible="true"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="#919191"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@drawable/cursor_drawable"
+                android:id="@+id/edt_password"
+        />
+
+        <ToggleButton
+                android:id="@+id/tb_pass_eye_password"
+                android:layout_width="22dp"
+                android:layout_height="14dp"
+                android:background="@drawable/toggle_pass_eye"
+                android:textOff=""
+                android:textOn=""
+                android:checked="true"
+                android:gravity="center"
+        />
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorPinkLightApp"/>
+
+    <com.zipstored.com.LatoRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm Password"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="25dp"
+            android:textSize="17sp"
+    />
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_marginLeft="25dp"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginRight="25dp"
+                  android:weightSum="1">
+
+
+        <com.zipstored.com.LatoRegularEditTextView
+                android:layout_width="0dp"
+                android:layout_weight=".95"
+                android:layout_height="wrap_content"
+                android:hint="@string/confirm_password_hint"
+                android:background="@null"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:cursorVisible="true"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="#919191"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@drawable/cursor_drawable"
+                android:id="@+id/edt_confirm_password"
+        />
+
+        <ToggleButton
+                android:id="@+id/tb_confirm_pass_eye"
+                android:layout_width="22dp"
+                android:layout_height="14dp"
+                android:background="@drawable/toggle_pass_eye"
+                android:textOff=""
+                android:textOn=""
+                android:checked="true"
+                android:gravity="center"
+        />
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorPinkLightApp"/>
+
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:id="@+id/bt_sign_up"
+            android:layout_gravity="center"
+            android:textColor="#fff"
+            android:layout_marginTop="50dp"
+            android:elevation="15dp"
+            android:stateListAnimator="@null"
+            android:background="@drawable/curve_rectangle_gray"
+    />
+
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+    >
+
+        <com.zipstored.com.LatoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have account ? "
+                android:textSize="14sp"
+        />
+
+        <com.zipstored.com.LatoBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_log_in"
+                android:text="  Login"
+                android:textSize="15sp"
+                android:textColor="@color/colorPinkApp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+        />
+
+
+    </LinearLayout>
+
+
+    <ImageView android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:src="@mipmap/img_btn_login"
+               android:layout_marginTop="15dp"
+               android:scaleType="fitXY"
+
+    />
+
+</LinearLayout>

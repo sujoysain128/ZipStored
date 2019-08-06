@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/tranparent"
+              android:gravity="center"
+>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginRight="39dp"
+            android:layout_marginLeft="39dp"
+            android:background="@drawable/curve_rectangle_box_white"
+            android:layout_centerInParent="true"
+    >
+
+        <com.zipstored.com.LatoRegularTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/forgot_password"
+                android:textSize="20sp"
+                android:id="@+id/tv_location"
+                android:textAlignment="center"
+                android:gravity="center"
+        />
+
+        <com.zipstored.com.LatoRegularEditTextView
+                android:layout_below="@id/tv_location"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Your Email-Id"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/cursor_drawable"
+                android:id="@+id/edt_forgot_email"
+        />
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="50dp"
+                      android:layout_alignParentBottom="true"
+                      android:weightSum="1"
+        >
+
+            <com.zipstored.com.LatoRegularTextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight=".5"
+                    android:text="@string/dismiss"
+                    android:id="@+id/tv_dismiss"
+                    android:textColor="@color/colorWhite"
+                    android:background="@drawable/rectangle_lite_pink_button"
+                    android:gravity="center"
+            />
+
+            <com.zipstored.com.LatoRegularTextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight=".5"
+                    android:text="@string/ok"
+                    android:id="@+id/tv_apply"
+                    android:textColor="@color/colorWhite"
+                    android:background="@drawable/rectangle_deep_pink_button"
+                    android:gravity="center"
+            />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

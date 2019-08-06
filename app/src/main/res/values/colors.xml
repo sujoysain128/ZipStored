@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#DF1F6C</color>
+    <color name="colorPrimaryDark">#DF1F6C</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorPinkApp">#DF1F6C</color>
+    <color name="colorLitePinkApp">#E11E6C</color>
+    <color name="colorDeepPinkApp">#D4115F</color>
+    <color name="colorPinkLightApp">#F75D9A</color>
+    <color name="transparent">#80000000</color>
+    <color name="tranparent">#9A232320</color>
+    <color name="colorDivider">#DBDBDB</color>
+    <color name="colorRatingOn">#FFC738</color>
+    <color name="gray">#FF7E7D7A</color>
+    <color name="Green">#369B4D</color>
+</resources>

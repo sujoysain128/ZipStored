@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="7dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/rr_root"
+                android:background="@drawable/rectangle_white_short_round_corner">
+
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="140dp"
+    >
+
+        <ImageView android:layout_width="100dp"
+                   android:layout_height="129dp"
+                   android:id="@+id/iv_thumb"
+                   android:scaleType="fitXY"
+                   android:layout_centerVertical="true"
+
+        />
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_marginTop="13dp"
+                      android:gravity="center"
+                      android:background="@mipmap/verified_background"
+        >
+
+            <ImageView android:layout_width="7dp"
+                       android:layout_height="7dp"
+                       android:src="@mipmap/tick"
+                       android:layout_marginRight="4dp"
+            />
+
+            <com.zipstored.com.LatoRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Verified"
+                    android:textSize="8sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+            />
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/iv_thumb"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:weightSum="1"
+                          android:layout_marginTop="5dp"
+            >
+
+                <com.zipstored.com.LatoBoldTextView android:layout_width="0dp"
+                                                    android:layout_weight=".75"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="Best Title WareHouse "
+                                                    android:textSize="15sp"
+                                                    android:singleLine="true"
+                                                    android:ellipsize="end"
+                                                    android:id="@+id/tv_storage_title"
+                />
+
+                <com.zipstored.com.LatoRegularTextView android:layout_width="0dp"
+                                                       android:layout_weight=".25"
+                                                       android:layout_height="wrap_content"
+                                                       android:text="$8.00"
+                                                       android:singleLine="true"
+                                                       android:textColor="@color/colorPinkApp"
+                                                       android:textSize="15sp"
+                                                       android:textStyle="bold"
+                                                       android:id="@+id/tv_price"
+                                                       android:layout_marginLeft="4dp"
+                />
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:weightSum="1"
+                          android:layout_marginTop="5dp"
+            >
+
+                <com.zipstored.com.LatoRegularTextView android:layout_width="0dp"
+                                                       android:layout_weight=".75"
+                                                       android:layout_height="wrap_content"
+                                                       android:text="WireHouse "
+                                                       android:textSize="12sp"
+                                                       android:singleLine="true"
+                                                       android:ellipsize="end"
+                                                       android:id="@+id/tv_storage_type_name"
+                />
+
+                <com.zipstored.com.LatoRegularTextView android:layout_width="0dp"
+                                                       android:layout_weight=".25"
+                                                       android:layout_height="wrap_content"
+                                                       android:text="Per Sqft."
+                                                       android:singleLine="true"
+                                                       android:textSize="12sp"
+
+
+                />
+
+            </LinearLayout>
+
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:layout_marginTop="3dp"
+                          android:weightSum="1"
+            >
+                <LinearLayout android:layout_width="0dp"
+                              android:layout_height="wrap_content"
+                              android:layout_weight=".3"
+                              android:visibility="visible"
+                              android:layout_marginRight="4dp"
+                              android:orientation="horizontal"
+                              android:id="@+id/ll_rating_layout"
+                >
+                    <ImageView android:layout_width="12dp"
+                               android:id="@+id/iv_1"
+                               android:layout_height="17dp"
+                               android:src="@mipmap/star"
+                               android:layout_marginRight="2dp"/>
+
+                    <ImageView android:layout_width="12dp"
+                               android:layout_height="17dp"
+                               android:id="@+id/iv_2"
+                               android:src="@mipmap/star"
+                               android:layout_marginRight="2dp"/>
+
+                    <ImageView android:layout_width="12dp"
+                               android:layout_height="17dp"
+                               android:id="@+id/iv_3"
+                               android:src="@mipmap/star"
+                               android:layout_marginRight="2dp"/>
+
+                    <ImageView android:layout_width="12dp"
+                               android:layout_height="17dp"
+                               android:id="@+id/iv_4"
+                               android:src="@mipmap/star"
+                               android:layout_marginRight="2dp"/>
+
+                    <ImageView android:layout_width="12dp"
+                               android:layout_height="17dp"
+                               android:id="@+id/iv_5"
+                               android:src="@mipmap/star"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout android:layout_width="0dp"
+                              android:layout_height="wrap_content"
+                              android:layout_weight=".3"
+                              android:visibility="gone"
+                              android:layout_marginRight="4dp"
+                              android:orientation="horizontal"
+                              android:id="@+id/ll_no_rating_layout"
+                >
+                    <ImageView android:layout_width="12dp"
+                               android:layout_height="17dp"
+                               android:src="@mipmap/star"
+                               android:tint="@color/gray"
+                               android:layout_marginRight="2dp"/>
+
+                    <ImageView android:layout_width="12dp"
+                               android:layout_height="17dp"
+                               android:src="@mipmap/star"
+                               android:tint="@color/gray"
+                               android:layout_marginRight="2dp"/>
+
+                    <ImageView android:layout_width="12dp"
+                               android:layout_height="17dp"
+                               android:tint="@color/gray"
+                               android:src="@mipmap/star"
+                               android:layout_marginRight="2dp"/>
+
+                    <ImageView android:layout_width="12dp"
+                               android:layout_height="17dp"
+                               android:src="@mipmap/star"
+                               android:tint="@color/gray"
+                               android:layout_marginRight="2dp"/>
+
+                    <ImageView android:layout_width="12dp"
+                               android:layout_height="17dp"
+                               android:tint="@color/gray"
+                               android:src="@mipmap/star"/>
+
+                </LinearLayout>
+
+                <com.zipstored.com.LatoRegularTextView android:layout_width="wrap_content"
+                                                       android:layout_height="wrap_content"
+                                                       android:text="No rating yet"
+                                                       android:layout_weight=".3"
+                                                       android:singleLine="true"
+                                                       android:visibility="gone"
+                                                       android:id="@+id/tv_no_reviews"
+                />
+
+
+                <!-- <RatingBar
+                         android:id="@+id/ratingBar1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         style="@style/Base.Widget.AppCompat.RatingBar.Indicator"
+                         android:max="5"
+                         android:scaleX=".5"
+                         android:scaleY=".5"
+                         android:visibility="gone"
+                         android:theme="@style/RatingBarcolorred"
+                         android:stepSize="1"
+                         android:isIndicator="false"
+                         android:clickable="false"
+                         android:layout_marginLeft="-45dp"
+                 />-->
+
+                <LinearLayout android:layout_width="0dp"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                              android:layout_weight=".45"
+                              android:layout_gravity="center"
+
+                >
+
+                    <ImageView android:layout_width="12dp"
+                               android:layout_height="12dp"
+                               android:src="@mipmap/black_round_tick"
+                               android:layout_marginTop="2dp"
+                               android:layout_marginRight="2dp"/>
+
+                    <com.zipstored.com.LatoRegularTextView android:layout_width="wrap_content"
+                                                           android:layout_height="wrap_content"
+                                                           android:text="Available space:"
+                                                           android:singleLine="true"
+                                                           android:textSize="12sp"
+
+
+                    />
+
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                              android:layout_weight=".25"
+                              android:layout_gravity="center"
+                >
+
+                    <com.zipstored.com.LatoRegularTextView android:layout_width="match_parent"
+                                                           android:layout_height="wrap_content"
+                                                           android:text="480ft"
+                                                           android:singleLine="true"
+                                                           android:textSize="15sp"
+                                                           android:id="@+id/tv_total_space"
+                                                           android:textColor="@color/colorBlack"
+
+
+                    />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:weightSum="1"
+                          android:layout_marginTop="10dp"
+            >
+
+                <TextView android:layout_width="80dp"
+                          android:layout_height="30dp"
+                          android:text="Chat"
+                          android:textColor="@color/colorWhite"
+                          android:gravity="center"
+                          android:background="@drawable/rectangle_deep_pink_short_round_corner"
+                />
+
+                <TextView android:layout_width="80dp"
+                          android:layout_height="30dp"
+                          android:text="Rent Now"
+                          android:textColor="@color/colorPinkApp"
+                          android:gravity="center"
+                          android:layout_marginLeft="20dp"
+                          android:background="@drawable/rectangle_outline_pink_round_corner"
+                />
+
+            </LinearLayout>
+
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:weightSum="1"
+                          android:layout_marginTop="5dp"
+            >
+
+                <ImageView android:layout_width="0dp"
+                           android:layout_height="15dp"
+                           android:layout_weight=".05"
+                           android:src="@mipmap/ft_location"
+                           android:layout_marginRight="5dp"
+                           android:layout_gravity="center"
+                />
+
+                <com.zipstored.com.LatoRegularTextView android:layout_width="0dp"
+                                                       android:layout_height="wrap_content"
+                                                       android:text="Houseton,Texas"
+                                                       android:layout_weight=".90"
+                                                       android:singleLine="true"
+                                                       android:ellipsize="end"
+                                                       android:textSize="12sp"
+                                                       android:id="@+id/tv_address"
+                />
+
+
+            </LinearLayout>
+
+
+            <com.zipstored.com.LatoRegularTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="(20 Miles away)"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textSize="12sp"
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/tv_distance"
+            />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

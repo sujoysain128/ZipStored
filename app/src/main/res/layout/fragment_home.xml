@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent" android:layout_height="match_parent"
+              android:clickable="true"
+              android:id="@+id/container"
+              android:background="@color/colorWhite"
+              android:orientation="vertical"
+              tools:context=".fragment.HomeFragment">
+
+
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+    >
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical">
+
+
+            <com.zipstored.com.LatoRegularTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/distance"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+            />
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginLeft="15dp"
+                          android:layout_marginRight="15dp"
+            >
+
+                <com.zipstored.com.LatoBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 - 20 Kilometers"
+                        android:textColor="@color/colorBlack"
+                        android:id="@+id/tv_distancerange"
+                />
+
+            </LinearLayout>
+
+            <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+                    android:id="@+id/rangeSeekbar1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:steps="1"
+                    app:corner_radius="10"
+                    app:bar_highlight_color="@color/colorPinkApp"
+                    app:left_thumb_image="@mipmap/icon_test"
+                    app:left_thumb_image_pressed="@mipmap/icon_test"
+                    app:right_thumb_image="@mipmap/icon_test"
+                    app:right_thumb_image_pressed="@mipmap/icon_test"
+                    app:bar_color="@color/colorDivider"
+                    app:data_type="_integer"
+                    android:elevation="10dp"
+            />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/colorDivider"
+                    android:id="@+id/v_divider"
+            />
+
+            <com.zipstored.com.LatoRegularTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/area"
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+            />
+
+            <!--<HorizontalScrollView android:layout_width="match_parent"
+                                  android:layout_height="50dp"
+                                  android:scrollbars="horizontal"
+                                  android:layout_marginLeft="15dp"
+                                  android:layout_marginRight="15dp">
+
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                              android:layout_marginTop="15dp"
+
+                >
+
+                    <com.zipstored.com.LatoBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/curve_rectangle_filter"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:text="5 X 5"
+                            android:textSize="13dp"
+                            android:elevation="5dp"
+                            android:padding="5dp"
+                            android:id="@+id/tv_5_5"
+                    />
+
+                    <com.zipstored.com.LatoBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/curve_rectangle_filter"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:text="10 X 10"
+                            android:textSize="13dp"
+                            android:elevation="5dp"
+                            android:padding="5dp"
+                            android:id="@+id/tv_10_10"
+
+                    />
+
+                    <com.zipstored.com.LatoBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/curve_rectangle_gray"
+                            android:textColor="@color/colorWhite"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:text="20 X 20"
+                            android:textSize="13dp"
+                            android:elevation="5dp"
+                            android:padding="5dp"
+                            android:id="@+id/tv_20_20"
+
+                    />
+
+                    <LinearLayout android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:orientation="horizontal"
+                                  android:gravity="center"
+                                  android:visibility="gone"
+                                  android:layout_marginRight="10dp"
+                                  android:background="@drawable/curve_rectangle_filter"
+                    >
+
+                        <com.zipstored.com.LatoRegularEditTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:text="Enter size"
+                                android:textSize="13dp"
+                                android:elevation="5dp"
+                                android:singleLine="true"
+                                android:gravity="center"
+                                android:layout_marginLeft="15dp"
+                        />
+
+                        <com.zipstored.com.LatoBoldTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text=" X "
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:textAlignment="center"
+                                android:textSize="13dp"
+
+
+                        />
+
+                        <com.zipstored.com.LatoRegularEditTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:text="enter size"
+                                android:textSize="13dp"
+                                android:elevation="5dp"
+                                android:singleLine="true"
+                                android:layout_marginRight="15dp"
+                        />
+                    </LinearLayout>
+
+                    <com.zipstored.com.LatoBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center"
+                            android:background="@drawable/curve_rectangle_filter"
+                            android:text="+Add Custom Size"
+                            android:elevation="5dp"
+                            android:textSize="13dp"
+                            android:padding="5dp"
+                            android:visibility="gone"
+
+                    />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>-->
+
+            <androidx.recyclerview.widget.RecyclerView android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content"
+                                                       android:layout_marginLeft="15dp"
+                                                       android:layout_marginRight="15dp"
+                                                       android:layout_marginTop="15dp"
+                                                       android:id="@+id/rv_area"
+            >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/colorDivider"
+                    android:id="@+id/v_divider_area"
+            />
+
+            <com.zipstored.com.LatoRegularTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type_of_space"
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+            />
+
+
+           <!-- <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:layout_marginLeft="15dp"
+                          android:layout_marginRight="15dp"
+            >
+                <com.zipstored.com.LatoBoldTextView
+                        android:id="@+id/tv_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/curve_rectangle_gray"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:text="Regular"
+                        android:textSize="13dp"
+                        android:elevation="5dp"
+                        android:textColor="@color/colorWhite"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+
+                />
+
+                <com.zipstored.com.LatoBoldTextView
+                        android:id="@+id/tv_climate_control"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/curve_rectangle_filter_pink"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:text="Climate Control"
+                        android:textColor="@color/colorLitePinkApp"
+                        android:textSize="13dp"
+                        android:elevation="5dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+
+                />
+
+            </LinearLayout>-->
+
+            <androidx.recyclerview.widget.RecyclerView android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content"
+                                                       android:layout_marginLeft="15dp"
+                                                       android:layout_marginRight="15dp"
+                                                       android:id="@+id/rv_space_type"
+
+            >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/colorDivider"
+                    android:id="@+id/v_divider_type"
+            />
+
+
+            <com.zipstored.com.LatoRegularTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price"
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+            />
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginLeft="15dp"
+                          android:layout_marginRight="15dp"
+            >
+
+                <com.zipstored.com.LatoBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$ 0 - $ 30000+ "
+                        android:textColor="@color/colorBlack"
+                        android:id="@+id/tv_pricerange"
+                />
+                <com.zipstored.com.LatoBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" per sq. ft"
+                        android:textSize="15sp"
+                        android:textColor="#9B9A9A"
+
+                />
+
+            </LinearLayout>
+
+            <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+                    android:id="@+id/rangeSeekbar2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:steps="1"
+                    app:corner_radius="10"
+                    app:bar_highlight_color="@color/colorPinkApp"
+                    app:left_thumb_image="@mipmap/icon_test"
+                    app:left_thumb_image_pressed="@mipmap/icon_test"
+                    app:right_thumb_image="@mipmap/icon_test"
+                    app:right_thumb_image_pressed="@mipmap/icon_test"
+                    app:bar_color="@color/colorDivider"
+                    app:data_type="_integer"
+            />
+
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/colorDivider"
+                    android:id="@+id/v_divider_price"
+            />
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:layout_marginTop="20dp"
+                          android:layout_marginLeft="15dp"
+                          android:layout_marginRight="15dp"
+            >
+
+                <com.zipstored.com.LatoRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rating"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+
+                />
+
+
+                <HorizontalScrollView android:layout_width="match_parent"
+                                      android:layout_height="50dp"
+                >
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:orientation="horizontal"
+
+                    >
+
+                        <com.zipstored.com.LatoBoldTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/curve_rectangle_filter"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:text="1 star"
+                                android:textSize="13dp"
+                                android:elevation="5dp"
+                                android:padding="5dp"
+                                android:id="@+id/tv_1_star"
+
+                        />
+
+                        <com.zipstored.com.LatoBoldTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/curve_rectangle_filter"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:text="2 star"
+                                android:textSize="13dp"
+                                android:elevation="5dp"
+                                android:padding="5dp"
+                                android:id="@+id/tv_2_star"
+
+                        />
+                        <com.zipstored.com.LatoBoldTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/curve_rectangle_filter"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:text="3 star"
+                                android:textSize="13dp"
+                                android:elevation="5dp"
+                                android:padding="5dp"
+                                android:id="@+id/tv_3_star"
+
+                        />
+
+                        <com.zipstored.com.LatoBoldTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/curve_rectangle_filter"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:text="4 star"
+                                android:textSize="13dp"
+                                android:elevation="5dp"
+                                android:padding="5dp"
+                                android:id="@+id/tv_4_star"
+
+                        />
+
+                        <com.zipstored.com.LatoBoldTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/curve_rectangle_filter"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:text="5 star"
+                                android:textSize="13dp"
+                                android:elevation="5dp"
+                                android:padding="5dp"
+                                android:id="@+id/tv_5_star"
+
+                        />
+
+                        <com.zipstored.com.LatoBoldTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/curve_rectangle_filter"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:text="Unrated"
+                                android:textSize="13dp"
+                                android:elevation="5dp"
+                                android:padding="5dp"
+                                android:id="@+id/tv_unrated"
+
+                        />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorDivider"
+                    android:id="@+id/v_divider_rating"
+            />
+
+            <com.zipstored.com.LatoRegularTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ammeinites"
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+            />
+
+            <androidx.recyclerview.widget.RecyclerView android:layout_width="match_parent"
+                                                       android:layout_height="150dp"
+                                                       android:id="@+id/rv_amminites"
+                                                       android:layout_marginLeft="15dp"
+                                                       android:layout_marginRight="15dp"
+            >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <com.zipstored.com.LatoRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_all_ammeinites"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPinkApp"
+                    android:textSize="10sp"
+                    android:id="@+id/tv_show_all"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:padding="10dp"
+            />
+
+
+
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/colorDivider"
+                    android:id="@+id/v_divider_list"
+            />
+
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:layout_marginTop="20dp"
+                          android:layout_marginLeft="15dp"
+                          android:layout_marginRight="15dp"
+                          android:weightSum="1"
+            >
+
+
+                <com.zipstored.com.LatoRegularTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".9"
+                        android:text="@string/location"
+                        android:textSize="20sp"
+                        android:id="@+id/tv_location"
+                        android:layout_gravity="center"
+
+
+                />
+
+                <ImageView android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:layout_weight=".1"
+                           android:id="@+id/iv_location"
+                           android:src="@mipmap/arrow_right"
+                           android:tint="@color/colorPinkApp"
+                />
+
+                <TextView android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight=".1"
+                          android:visibility="gone"
+                          android:textColor="@color/colorPinkApp"
+                          android:textSize="20sp"
+                          android:id="@+id/tv_location_count"
+                />
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/colorDivider"
+                    android:id="@+id/v_divider_location"
+            />
+
+
+            <Button android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_deep_pink_round_corner"
+                    android:textColor="@color/colorWhite"
+                    android:text="Apply"
+                    android:textAllCaps="false"
+                    android:id="@+id/bt_apply"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="30dp"
+            />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

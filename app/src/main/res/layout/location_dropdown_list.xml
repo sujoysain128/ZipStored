@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/tranparent"
+              android:gravity="center"
+              android:orientation="vertical"
+>
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginRight="39dp"
+            android:layout_marginLeft="39dp"
+            android:background="@drawable/curve_rectangle_box_white"
+            android:layout_centerInParent="true"
+    >
+
+        <com.zipstored.com.LatoRegularTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/location"
+                android:textSize="20sp"
+                android:id="@+id/tv_location"
+                android:textAlignment="center"
+                android:gravity="center"
+        />
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="70dp"
+                      android:background="#F7F7F7"
+                      android:id="@+id/ll_search_layout"
+                      android:layout_below="@id/tv_location"
+        >
+            <include
+                    layout="@layout/search_bar_layout"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView android:layout_width="match_parent"
+                                                   android:layout_height="200dp"
+                                                   android:layout_below="@id/ll_search_layout"
+                                                   android:layout_marginLeft="20dp"
+                                                   android:layout_marginRight="20dp"
+                                                   android:layout_marginTop="10dp"
+                                                   android:id="@+id/rv_location">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="50dp"
+                      android:layout_alignParentBottom="true"
+                      android:weightSum="1"
+        >
+
+            <com.zipstored.com.LatoRegularTextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight=".5"
+                    android:text="@string/dismiss"
+                    android:id="@+id/tv_dismiss"
+                    android:textColor="@color/colorWhite"
+                    android:background="@drawable/rectangle_lite_pink_button"
+                    android:gravity="center"
+            />
+
+            <com.zipstored.com.LatoRegularTextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight=".5"
+                    android:text="@string/apply"
+                    android:id="@+id/tv_apply"
+                    android:textColor="@color/colorWhite"
+                    android:background="@drawable/rectangle_deep_pink_button"
+                    android:gravity="center"
+            />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

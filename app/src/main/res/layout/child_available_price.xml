@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+               android:elevation="10dp"
+>
+
+
+    <com.zipstored.com.LatoRegularTextView android:layout_width="wrap_content"
+                                           android:layout_height="wrap_content"
+                                           android:text="5X5 = 25 Sqft"
+                                           android:textColor="@color/gray"
+                                           android:textSize="20sp"
+                                           android:id="@+id/tv_area"
+                                           android:layout_marginRight="15dp"
+                                           android:layout_marginLeft="10dp"
+                                           android:layout_centerVertical="true"
+    />
+
+    <com.zipstored.com.LatoRegularTextView android:layout_width="wrap_content"
+                                           android:layout_height="wrap_content"
+                                           android:text="$ 149"
+                                           android:textColor="@color/colorPinkApp"
+                                           android:textSize="20sp"
+                                           android:layout_toRightOf="@id/tv_area"
+                                           android:layout_centerVertical="true"
+                                           android:id="@+id/tv_price_value"
+                                           android:layout_marginRight="15dp"
+    />
+
+    <com.zipstored.com.LatoRegularTextView android:layout_width="wrap_content"
+                                           android:layout_height="wrap_content"
+                                           android:textColor="@color/colorWhite"
+                                           android:textSize="15sp"
+                                           android:layout_toRightOf="@id/tv_price_value"
+                                           android:layout_centerVertical="true"
+                                           android:text="Rent Now"
+                                           android:paddingLeft="10dp"
+                                           android:paddingRight="10dp"
+                                           android:paddingTop="5dp"
+                                           android:paddingBottom="5dp"
+                                           android:id="@+id/tv_rent_now"
+                                           android:background="@drawable/rectangle_deep_pink_short_round_corner"
+    />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorDivider"
+            android:id="@+id/v_divider_facilities"
+            android:layout_below="@+id/tv_rent_now"
+            android:layout_marginTop="10dp"
+    />
+
+</RelativeLayout>

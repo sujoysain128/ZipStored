@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent" android:layout_height="match_parent"
+              android:id="@+id/container"
+              android:background="@color/colorWhite"
+              android:orientation="vertical"
+              tools:context=".fragment.StorageProviderDetailsFragment">
+
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray"
+        >
+
+            <RelativeLayout
+                    android:id="@+id/rl_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray"
+            >
+                <androidx.viewpager.widget.ViewPager
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:id="@+id/viewPager"
+
+                >
+
+
+                </androidx.viewpager.widget.ViewPager>
+
+                <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        app:tabBackground="@drawable/tab_selector"
+                        app:tabGravity="center"
+                        app:tabIndicatorHeight="0dp"
+                        android:layout_alignParentBottom="true"
+                        android:visibility="visible"
+
+                />
+
+            </RelativeLayout>
+
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:layout_below="@+id/rl_top"
+                          android:layout_marginLeft="5dp"
+                          android:layout_marginRight="5dp"
+                          android:layout_marginTop="5dp"
+                          android:background="@drawable/rectangle_white_short_round_corner"
+            >
+
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:orientation="vertical"
+                >
+
+
+                    <RelativeLayout android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+
+                    >
+
+                        <LinearLayout android:layout_width="100dp"
+                                      android:layout_height="40dp"
+                                      android:orientation="horizontal"
+                                      android:layout_marginLeft="10dp"
+                                      android:layout_marginTop="10dp"
+                                      android:gravity="center"
+                                      android:id="@+id/ll_verified"
+                                      android:background="@drawable/rectangle_deep_green_short_round_corner"
+                        >
+
+                            <ImageView android:layout_width="20dp"
+                                       android:layout_height="15dp"
+                                       android:src="@mipmap/large_tick"
+                                       android:tint="@color/colorWhite"
+                                       android:layout_gravity="center"
+                                       android:layout_marginRight="2dp"
+                            />
+
+                            <com.zipstored.com.LatoRegularTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/verified"
+                                    android:textColor="@color/colorWhite"
+                                    android:textAlignment="center"
+                                    android:layout_gravity="center"
+
+                            />
+                        </LinearLayout>
+
+                        <RatingBar android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:scaleX=".5"
+                                   android:scaleY=".5"
+                                   android:max="5"
+                                   android:layout_toRightOf="@+id/ll_verified"
+                                   android:layout_marginLeft="60dp"
+                                   android:layout_alignLeft="@+id/ll_verified"
+                                   android:layout_centerVertical="true"
+                                   android:id="@+id/rating_bar"
+                                   android:layout_marginTop="5dp"
+                                   android:layout_marginRight="-30dp"
+                        />
+
+                        <com.zipstored.com.LatoRegularTextView android:layout_width="wrap_content"
+                                                               android:layout_height="wrap_content"
+                                                               android:text="Ratings 550"
+                                                               android:layout_toRightOf="@+id/rating_bar"
+                                                               android:gravity="center_vertical"
+                                                               android:layout_centerInParent="true"
+                                                               android:id="@+id/tv_rating_text"
+                        />
+
+
+                    </RelativeLayout>
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorDivider"
+                            android:id="@+id/v_divider"
+                    />
+
+
+                    <RelativeLayout android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="10dp"
+                    >
+
+                        <com.zipstored.com.LatoBoldTextView android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Best Title wirehouse"
+                                                            android:textSize="20sp"
+                                                            android:id="@+id/tv_storage_title"
+                                                            android:textColor="@color/colorBlack"
+                                                            android:layout_marginTop="10dp"
+                        />
+
+                        <com.zipstored.com.LatoBoldTextView android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Warehouse"
+                                                            android:textSize="15sp"
+                                                            android:layout_marginTop="5dp"
+                                                            android:layout_below="@+id/tv_storage_title"
+                                                            android:id="@+id/tv_warehouse"
+                        />
+
+                        <ImageView android:layout_width="wrap_content"
+                                   android:layout_height="20dp"
+                                   android:layout_below="@+id/tv_warehouse"
+                                   android:src="@mipmap/ft_location"
+                                   android:id="@+id/iv_location"
+                                   android:layout_marginTop="16dp"
+                        />
+
+                        <com.zipstored.com.LatoRegularTextView android:layout_width="wrap_content"
+                                                               android:layout_height="wrap_content"
+                                                               android:text="@string/storage_address"
+                                                               android:textSize="18sp"
+                                                               android:layout_marginLeft="5dp"
+                                                               android:layout_marginTop="15dp"
+                                                               android:layout_below="@+id/tv_warehouse"
+                                                               android:layout_toRightOf="@+id/iv_location"
+                                                               android:id="@+id/tv_storage_address"
+                                                               android:textColor="#757575"
+                        />
+
+                        <com.zipstored.com.LatoRegularTextView android:layout_width="wrap_content"
+                                                               android:layout_height="wrap_content"
+                                                               android:text=",20 miles away"
+                                                               android:textSize="18sp"
+                                                               android:layout_marginLeft="5dp"
+                                                               android:layout_marginTop="15dp"
+                                                               android:layout_below="@+id/tv_warehouse"
+                                                               android:layout_toRightOf="@+id/tv_storage_address"
+                                                               android:id="@+id/tv_storage_distance"
+                        />
+
+                        <com.zipstored.com.LatoRegularTextView android:layout_width="wrap_content"
+                                                               android:layout_height="wrap_content"
+                                                               android:text="Total area / Space"
+                                                               android:textColor="@color/colorBlack"
+                                                               android:textSize="18sp"
+                                                               android:layout_marginLeft="5dp"
+                                                               android:layout_marginTop="15dp"
+                                                               android:layout_below="@+id/tv_storage_distance"
+                                                               android:id="@+id/tv_total_area"
+                        />
+
+                        <ImageView android:layout_width="wrap_content"
+                                   android:layout_height="20dp"
+                                   android:layout_below="@+id/tv_total_area"
+                                   android:src="@mipmap/login_tick"
+                                   android:tint="@color/Green"
+                                   android:id="@+id/iv_green_tick"
+                                   android:layout_marginTop="10dp"
+                                   android:layout_centerVertical="true"
+                        />
+
+                        <com.zipstored.com.LatoRegularTextView android:layout_width="wrap_content"
+                                                               android:layout_height="wrap_content"
+                                                               android:layout_below="@+id/tv_total_area"
+                                                               android:layout_toRightOf="@+id/iv_green_tick"
+                                                               android:text="2000 Sqft"
+                                                               android:textSize="18sp"
+                                                               android:textColor="@color/gray"
+                                                               android:layout_marginTop="8dp"
+                                                               android:layout_marginLeft="5dp"
+                                                               android:layout_centerInParent="true"
+                        />
+
+                    </RelativeLayout>
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorDivider"
+                            android:id="@+id/v_divider_details"
+                            android:layout_marginTop="10dp"
+                    />
+
+
+                    <com.zipstored.com.LatoRegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Available slots"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                    />
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorDivider"
+                            android:id="@+id/v_divider_detail"
+                            android:layout_marginTop="10dp"
+                    />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rv_available_price"
+                            android:layout_marginTop="5dp"
+                    >
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                    <com.zipstored.com.LatoRegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Information"
+                            android:textSize="20sp"
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                    />
+
+                    <com.zipstored.com.LatoRegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="About Warehouse"
+                            android:textSize="15sp"
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                    />
+
+                    <com.zipstored.com.LatoRegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/warehouse_details"
+                            android:textSize="13sp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                    />
+
+                    <com.zipstored.com.LatoRegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Read more"
+                            android:textSize="13sp"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorPinkApp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="10dp"
+                    />
+
+                    <com.zipstored.com.LatoRegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Warehouse Rule"
+                            android:textSize="15sp"
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                    />
+
+                    <RelativeLayout android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="5dp"
+                    >
+
+                        <androidx.recyclerview.widget.RecyclerView android:layout_width="match_parent"
+                                                                   android:layout_height="wrap_content"
+                                                                   android:id="@+id/rv_warehouse_rule"
+                        >
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+
+                        <!--<ImageView android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:src="@mipmap/active_dot"
+                                   android:tint="@color/colorBlack"
+                                   android:id="@+id/iv_black_dot_2"
+                                   android:layout_marginLeft="5dp"
+                                   android:layout_below="@+id/tv_rule_pet"
+                                   android:layout_marginTop="10dp"
+                        />
+
+                        <com.zipstored.com.LatoRegularTextView android:layout_width="wrap_content"
+                                                               android:layout_height="wrap_content"
+                                                               android:layout_toRightOf="@id/iv_black_dot_2"
+                                                               android:layout_below="@+id/tv_rule_pet"
+                                                               android:layout_marginLeft="10dp"
+                                                               android:text="@string/rule_two_smoking"
+                                                               android:textSize="13sp"
+                                                               android:layout_marginTop="10dp"
+                                                               android:id="@+id/tv_smoking_rule"
+                        />
+
+                        <ImageView android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:src="@mipmap/active_dot"
+                                   android:tint="@color/colorBlack"
+                                   android:id="@+id/iv_black_dot_3"
+                                   android:layout_marginLeft="5dp"
+                                   android:layout_below="@+id/tv_smoking_rule"
+                                   android:layout_marginTop="10dp"
+                        />
+
+                        <com.zipstored.com.LatoRegularTextView android:layout_width="wrap_content"
+                                                               android:layout_height="wrap_content"
+                                                               android:layout_toRightOf="@id/iv_black_dot_3"
+                                                               android:layout_below="@+id/tv_smoking_rule"
+                                                               android:layout_marginLeft="10dp"
+                                                               android:text="@string/rule_two_smoking"
+                                                               android:textSize="13sp"
+                                                               android:layout_marginTop="10dp"
+                        />-->
+
+                    </RelativeLayout>
+
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorDivider"
+                            android:id="@+id/v_divider_details_rule"
+                            android:layout_marginTop="10dp"
+                    />
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:orientation="horizontal"
+                                  android:layout_marginTop="10dp"
+                    >
+
+                        <com.zipstored.com.LatoRegularTextView android:layout_width="wrap_content"
+                                                               android:layout_height="wrap_content"
+                                                               android:text="@string/ammeinites"
+                                                               android:textSize="20sp"
+                                                               android:textColor="@color/colorBlack"
+                                                               android:layout_marginTop="10dp"
+                                                               android:layout_marginLeft="10dp"
+                        />
+
+
+                        <com.zipstored.com.LatoRegularTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="View All"
+                                android:textSize="13sp"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorPinkApp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:gravity="end"
+                        />
+
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView android:layout_width="match_parent"
+                                                               android:layout_height="wrap_content"
+                                                               android:id="@+id/rv_amminities_details"
+                                                               android:layout_marginTop="10dp"
+                                                               android:layout_marginLeft="10dp"
+                    >
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorDivider"
+                            android:id="@+id/v_divider_details_am"
+                            android:layout_marginTop="10dp"
+                    />
+
+                    <com.zipstored.com.LatoRegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Facilities"
+                            android:textSize="15sp"
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                    />
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:orientation="horizontal"
+                                  android:layout_marginLeft="10dp"
+                                  android:layout_marginTop="10dp"
+                    >
+
+                        <ImageView android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:src="@mipmap/login_tick"
+                                   android:layout_marginRight="5dp"
+                        />
+
+                        <com.zipstored.com.LatoRegularTextView android:layout_width="wrap_content"
+                                                               android:layout_height="wrap_content"
+                                                               android:text="Pick up"
+                                                               android:layout_gravity="center"
+                                                               android:textSize="13sp"
+                        />
+
+
+                        <ImageView android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:src="@mipmap/login_tick"
+                                   android:layout_marginLeft="20dp"
+                                   android:layout_marginRight="5dp"
+                        />
+
+                        <com.zipstored.com.LatoRegularTextView android:layout_width="wrap_content"
+                                                               android:layout_height="wrap_content"
+                                                               android:text="Drop off"
+                                                               android:layout_gravity="center"
+                                                               android:textSize="13sp"
+                        />
+
+
+                    </LinearLayout>
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorDivider"
+                            android:id="@+id/v_divider_facilities"
+                            android:layout_marginTop="10dp"
+                    />
+
+
+                    <com.zipstored.com.LatoRegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Locations"
+                            android:textSize="15sp"
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                    />
+
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:orientation="horizontal"
+                                  android:layout_marginLeft="10dp"
+                    >
+
+
+                        <ImageView android:layout_width="wrap_content"
+                                   android:layout_height="14dp"
+                                   android:src="@mipmap/ft_location"
+                                   android:id="@+id/iv_location_details"
+                                   android:layout_marginTop="14dp"
+                        />
+
+                        <com.zipstored.com.LatoRegularTextView android:layout_width="wrap_content"
+                                                               android:layout_height="wrap_content"
+                                                               android:text="@string/storage_address"
+                                                               android:textSize="13sp"
+                                                               android:layout_marginLeft="5dp"
+                                                               android:layout_marginTop="10dp"
+                        />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="50dp"
+                                  android:weightSum="1"
+                                  android:layout_marginTop="10dp"
+                                  android:layout_marginLeft="10dp"
+                                  android:layout_marginRight="10dp"
+                                  android:layout_marginBottom="20dp"
+                    >
+
+                        <com.zipstored.com.LatoRegularTextView
+                                android:layout_width="0dp"
+                                android:layout_height="50dp"
+                                android:layout_weight=".5"
+                                android:text="@string/price_button_text_in_details"
+                                android:textSize="15sp"
+                                android:id="@+id/tv_dismiss"
+                                android:textColor="@color/colorWhite"
+                                android:background="@drawable/rectangle_lite_pink_button"
+                                android:gravity="center"
+                        />
+
+                        <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_weight=".5"
+                                android:layout_height="50dp"
+                                android:background="@drawable/rectangle_deep_pink_button"
+
+                        >
+
+                            <LinearLayout android:layout_width="match_parent"
+                                          android:layout_height="30dp"
+                                          android:layout_marginRight="20dp"
+                                          android:layout_marginLeft="20dp"
+                                          android:layout_marginTop="10dp"
+                                          android:orientation="horizontal"
+                                          android:gravity="center"
+                                          android:background="@drawable/rectangle_white_short_round_corner"
+                            >
+
+                                <ImageView android:layout_width="wrap_content"
+                                           android:layout_height="20dp"
+                                           android:src="@mipmap/speech_chat"
+                                           android:tint="@color/colorPinkApp"
+                                           android:layout_gravity="center"
+                                />
+
+                                <com.zipstored.com.LatoRegularTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="50dp"
+                                        android:text="@string/chat"
+                                        android:id="@+id/tv_chat"
+                                        android:textColor="@color/colorPinkApp"
+                                        android:gravity="center"
+                                />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

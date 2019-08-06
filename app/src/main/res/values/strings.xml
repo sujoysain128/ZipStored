@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">ZipStored</string>
+    <string name="login">LogIn</string>
+    <string name="email_hint">Enter Email</string>
+    <string name="password_hint">Enter Password</string>
+    <string name="forgot_password">Forgot Password ?</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="full_name_hint">Enter full name</string>
+    <string name="next">Next</string>
+    <string name="phone_hint">Enter your phone no.</string>
+    <string name="confirm_password_hint">Enter Your Password</string>
+    <string name="sign_up">Sign Up</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_right_drawer">Right Drawer</string>
+    <string name="tc_policies"><![CDATA[T&C & Policies]]></string>
+    <string name="help"><![CDATA[Help & Support]]></string>
+    <string name="distance">Distance</string>
+    <string name="area">Area or Space looking for</string>
+    <string name="price">Price</string>
+    <string name="rating">Start rating \u003C</string>
+    <string name="ammeinites">Amenities</string>
+    <string name="show_all_ammeinites">show all ammenites</string>
+    <string name="location">Location</string>
+    <string name="type_of_space">Type of Space</string>
+    <string name="filter">Filter</string>
+    <string name="sort">Sort</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="apply">Apply</string>
+    <string name="ok">Ok</string>
+    <string name="verified">Verified</string>
+    <string name="storage_address">Dallas,Tx,USA</string>
+    <string name="warehouse_details">A warehouse is a building of stored and goods.Warehouse are used by
+        manufacturer,exporter,imports,wholesellers,transport,busniess,custom,etc.
+    </string>
+    <string name="rule_one_pets">Pets are not allowed here</string>
+    <string name="rule_two_smoking">Smoking not allowed</string>
+    <string name="price_button_text_in_details">$ 8.00 / sqft</string>
+    <string name="chat">Chat</string>
+</resources>
